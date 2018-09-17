@@ -590,8 +590,11 @@ class googleimagesdownload:
                 if no_numbering:
                     path = main_directory + "/" + dir_name + "/" + prefix + image_name
                 else:
-                    path = main_directory + "/" + dir_name + "/" + prefix + str(count) + ". " + image_name
-
+                    pos = image_name.find('.')
+                    if pos != -1:
+                        path = main_directory + "/" + dir_name + "/" + prefix + str(count) + image_name[pos:]
+                    else:
+                        path = main_directory + "/" + dir_name + "/" + prefix + str(count) + ". " + image_name
                 try:
                     output_file = open(path, 'wb')
                     output_file.write(data)
