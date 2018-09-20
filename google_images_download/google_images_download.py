@@ -695,7 +695,7 @@ class googleimagesdownload:
         abs_path = []
         errorCount = 0
         i = 0
-        count = 1
+        count = 2
         while count < limit+1:
             object, end_content = self._get_next_item(page)
             if object == "no_links":

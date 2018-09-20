@@ -48,7 +48,7 @@ if __name__ == "__main__":
     #read_extern_file('diff.txt', star_list)
     #read_extern_file('iqiyi-top-stars.txt', star_list)
     star_list.clear()
-    read_extern_file('missing.txt', star_list)
+    read_extern_file('persons.txt', star_list)
     #for i in range(start, len(star_list), 10):
     for i in range(start, len(star_list)):
         arguments["keywords"] = star_list[i]
